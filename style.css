@@ -325,5 +325,13 @@ input:focus {
     color: #cccccc;
 }
 
-footer {
-    background
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2em; }
+    .features { flex-direction: column; }
+    .feature-card { margin: 1rem 0; }
+    .content-grid { grid-template-columns: 1fr; }
+    .sidebar { order: -1; }
+    .video-grid { grid-template-columns: 1fr; }
+    #featured-player { height: 250px; }
+}
