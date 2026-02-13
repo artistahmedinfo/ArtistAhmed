@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Premium Online Course</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h2><i class="fas fa-graduation-cap"></i> Premium Course Hub</h2>
+    </nav>
+    <div id="home-section" class="section">
+        <div class="hero">
+            <h1>Unlock Your Potential with Our Exclusive Course</h1>
+            <p>Access premium video lessons, expert insights, and tools to master [Your Topic]. Join thousands of successful learners today.</p>
+            <button onclick="showLogin()" class="btn-primary">Get Started <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-video"></i>
+                <h3>High-Quality Videos</h3>
+                <p>Engaging, HD content delivered on-demand.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Community Access</h3>
+                <p>Connect with peers and instructors.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-certificate"></i>
+                <h3>Certificates</h3>
+                <p>Earn recognized completion certificates.</p>
+            </div>
+        </div>
+    </div>
+    <div id="login-section" class="section" style="display: none;">
+        <div class="card">
+            <h1>Welcome Back</h1>
+            <p>Enter your access code to unlock exclusive videos.</p>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="access-code" placeholder="Access Code">
+            </div>
+            <button onclick="checkAccess()" class="btn-primary">Access Course <i class="fas fa-arrow-right"></i></button>
+            <a href="#" class="forgot-link">Forgot Code? Contact Support</a>
+        </div>
+    </div>
+    <div id="course-section" class="section" style="display: none;">
+        <div class="container">
+            <h1>Your Exclusive Videos</h1>
+            <p>Enjoy premium content tailored for you.</p>
+            <div class="video-grid">
+                <!-- Videos add kor here -->
+            </div>
+            <button onclick="logout()" class="btn-secondary">Logout <i class="fas fa-sign-out-alt"></i></button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Premium Course Hub. All rights reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
