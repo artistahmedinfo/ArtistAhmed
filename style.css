@@ -326,29 +326,4 @@ input:focus {
 }
 
 footer {
-    background: rgba(0, 0, 0, 0.1);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
-}
-
-footer a {
-    color: #667eea;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2em; }
-    .features { flex-direction: column; }
-    .feature-card { margin: 1rem 0; }
-    .content-grid { grid-template-columns: 1fr; }
-    .sidebar { order: -1; }
-    .video-grid { grid-template-columns: 1fr; }
-    #featured-player { height: 250px; }
-}
+    background
