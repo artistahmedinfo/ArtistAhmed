@@ -51,26 +51,51 @@
     <div id="course-section" class="section" style="display: none;">
         <div class="container">
             <h1>Your Exclusive Videos</h1>
-            <p>Enjoy premium content tailored for you.</p>
+            <p>Enjoy premium content tailored for you. Click on a video to play.</p>
             <div class="video-grid">
-                <!-- Apnar videos add kor here -->
-                <div class="video-card">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/dp2OYt_2O9E?si=eJSZvCsSQe_PpSDK" 
-                            title="YouTube video player" frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen style="border-radius: 10px;"></iframe>
+                <div class="video-card" onclick="openModal('dp2OYt_2O9E', 'Lesson 1: Introduction')">
+                    <img src="https://img.youtube.com/vi/dp2OYt_2O9E/0.jpg" alt="Thumbnail" class="video-thumb">
                     <h3>Lesson 1: Introduction</h3>
+                    <p class="video-description">Learn the basics. Duration: 10 mins.</p>
                 </div>
-                <div class="video-card">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/dp2OYt_2O9E" 
-                            title="YouTube video player" frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen style="border-radius: 10px;"></iframe>
+                <div class="video-card" onclick="openModal('dp2OYt_2O9E', 'Lesson 2: Advanced')">
+                    <img src="https://img.youtube.com/vi/dp2OYt_2O9E/0.jpg" alt="Thumbnail" class="video-thumb">
                     <h3>Lesson 2: Advanced</h3>
+                    <p class="video-description">Dive deeper. Duration: 15 mins.</p>
                 </div>
                 <!-- Aur videos add kor, same format e -->
             </div>
             <button onclick="logout()" class="btn-secondary">Logout <i class="fas fa-sign-out-alt"></i></button>
+        </div>
+    </div>
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <iframe id="modal-video" width="100%" height="400" src="" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen></iframe>
+            <div class="related-videos">
+                <h3>Related Videos</h3>
+                <div class="related-list">
+                    <div class="related-item" onclick="switchVideo('dp2OYt_2O9E', 'Lesson 2: Advanced')">
+                        <img src="https://img.youtube.com/vi/dp2OYt_2O9E/0.jpg" alt="Thumbnail">
+                        <div class="related-info">
+                            <h4>Lesson 2: Advanced</h4>
+                            <p>Premium Course Hub • 850 views</p>
+                        </div>
+                    </div>
+                    <div class="related-item" onclick="switchVideo('dp2OYt_2O9E', 'Lesson 1: Introduction')">
+                        <img src="https://img.youtube.com/vi/dp2OYt_2O9E/0.jpg" alt="Thumbnail">
+                        <div class="related-info">
+                            <h4>Lesson 1: Introduction</h4>
+                            <p>Premium Course Hub • 1.2K views</p>
+                        </div>
+                    </div>
+                    <!-- Aur related videos add kor -->
+                </div>
+            </div>
         </div>
     </div>
     <footer>
