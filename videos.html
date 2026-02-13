@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - E-Learning Course</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar dark-navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i> E-Learning Hub
+            </div>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="featured-video">
+            <div class="video-container">
+                <video id="featured-player" controls poster="https://via.placeholder.com/800x450/333/fff?text=Featured+Video">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section class="content-grid">
+            <div class="video-grid">
+                <div class="video-card" onclick="openModal('dp2OYt_2O9E', 'Lesson 1: Introduction')">
+                    <img src="https://img.youtube.com/vi/dp2OYt_2O9E/0.jpg" alt="Thumbnail" class="video-thumb">
+                    <div class="video-info">
+                        <h3>Lesson 1: Introduction</h3>
+                        <p>Duration: 10:30 | Uploaded: 2 days ago</p>
+                    </div>
+                </div>
+                <div class="video-card" onclick="openModal('dp2OYt_2O9E', 'Lesson 2: Advanced')">
+                    <img src="https://img.youtube.com/vi/dp2OYt_2O9E/0.jpg" alt="Thumbnail" class="video-thumb">
+                    <div class="video-info">
+                        <h3>Lesson 2: Advanced</h3>
+                        <p>Duration: 15:45 | Uploaded: 1 week ago</p>
+                    </div>
+                </div>
+                <!-- Aur videos add kor, same format e -->
+            </div>
+
+            <aside class="sidebar">
+                <h3>Recommended Videos</h3>
+                <div class="recommended-list">
+                    <div class="rec-item" onclick="openModal('dp2OYt_2O9E', 'Python for Beginners')">
+                        <img src="https://img.youtube.com/vi/dp2OYt_2O9E/0.jpg" alt="Rec Thumbnail">
+                        <div class="rec-info">
+                            <h4>Python for Beginners</h4>
+                            <p>8:45</p>
+                        </div>
+                    </div>
+                    <div class="rec-item" onclick="openModal('dp2OYt_2O9E', 'Data Science Intro')">
+                        <img src="https://img.youtube.com/vi/dp2OYt_2O9E/0.jpg" alt="Rec Thumbnail">
+                        <div class="rec-info">
+                            <h4>Data Science Intro</h4>
+                            <p>12:30</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 E-Learning Hub. All rights reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
