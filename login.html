@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - E-Learning Course</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i> E-Learning Hub
+            </div>
+            <a href="index.html" class="back-link">Back to Home</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="login-section">
+            <div class="card">
+                <h1>Member Login</h1>
+                <p>Enter your access code to unlock exclusive videos.</p>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="access-code" placeholder="Access Code">
+                </div>
+                <button onclick="checkAccess()" class="btn-primary">Access Course <i class="fas fa-arrow-right"></i></button>
+                <a href="#" class="forgot-link">Forgot Code? Contact Support</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 E-Learning Hub. All rights reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
