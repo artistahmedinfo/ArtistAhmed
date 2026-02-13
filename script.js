@@ -10,13 +10,21 @@ function checkLogin() {
 
 // Login function
 function checkAccess() {
-    const input = document.getElementById("access-code").value.trim();
+    console.log("checkAccess called"); // Debug: Check console when button is clicked
+    const input = document.getElementById("access-code");
     if (!input) {
+        console.error("Input field #access-code not found");
+        return;
+    }
+    const value = input.value.trim();
+    console.log("Input value:", value); // Debug: See what was entered
+    if (!value) {
         alert("Please enter an access code.");
         return;
     }
-    if (input === accessCode) {
+    if (value === accessCode) {
         sessionStorage.setItem('loggedIn', 'true'); // Set login flag
+        console.log("Redirecting to videos.html"); // Debug
         window.location.href = "videos.html";
     } else {
         alert("Incorrect access code! Please contact support.");
@@ -43,3 +51,6 @@ window.checkAccess = checkAccess;
 window.logout = logout;
 window.openModal = openModal;
 window.checkLogin = checkLogin;
+
+// Debug: Confirm script loaded
+console.log("Script loaded successfully");
