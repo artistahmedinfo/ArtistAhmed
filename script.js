@@ -19,4 +19,27 @@ function checkAccess() {
         sessionStorage.setItem('loggedIn', 'true'); // Set login flag
         window.location.href = "videos.html";
     } else {
-        alert("
+        alert("Incorrect access code! Please contact support.");
+    }
+}
+
+// Logout function
+function logout() {
+    sessionStorage.removeItem('loggedIn'); // Clear login flag
+    window.location.href = "index.html";
+}
+
+// Open video in featured player
+function openModal(videoId, title) {
+    const player = document.getElementById('featured-player');
+    if (player) {
+        player.src = `https://www.youtube.com/embed/${videoId}`;
+        window.scrollTo(0, 0);
+    }
+}
+
+// Expose functions globally
+window.checkAccess = checkAccess;
+window.logout = logout;
+window.openModal = openModal;
+window.checkLogin = checkLogin;
